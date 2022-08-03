@@ -1,4 +1,17 @@
-export default function Card({ people }) {
+interface People {
+  name: string
+  birthYear: string
+  gender: string
+  eyeColor: string
+  hairColor: string
+  homeworld: {
+    name: string
+    population: number
+    diameter: number
+  }
+};
+
+export default function Card({ people }: { people: People }) {
   return (
     <div className="p-6 m-6 bg-white shadow-lg shadow-blue-400/50 w-64">
       <div className="flex flex-col items-center">
